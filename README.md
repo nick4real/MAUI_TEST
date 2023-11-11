@@ -1,10 +1,11 @@
 # MAUI_TEST
 
 Problem: 
-Page3 don't returns to Page2 and throws exception.
+Page3 don't returns to Page2 and throws exception. Relative routes don't work, but absolute ones do.
 
 How to trigger:
-Click buttons `Next -> Next -> Back`
+1. In AppShell.xaml.cs comment *//Works block* and decomment *//Doesn't works*.
+2. Build app and click buttons `Next -> Next -> Back`
 
 Error:
 `System.ArgumentException: 'Ambiguous routes matched for: //IMPL_MainPage/IMPL_MainPage/MainPage/NewPage1 matches found: //IMPL_MainPage/IMPL_MainPage/MainPage/NewPage1,//IMPL_MainPage/IMPL_MainPage/MainPage/NewPage1 (Parameter 'uri')'`
